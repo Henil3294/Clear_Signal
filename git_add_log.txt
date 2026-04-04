@@ -1,0 +1,491 @@
+﻿git : warning: in the 
+working copy of 
+'.gitignore', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+At line:1 char:85
++ ... \Clear_Signal\git
+_init_log.txt 
+-Encoding utf8; git 
+add . 2>&1 | Out-F ...
++                      
+                       
+       ~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : 
+NotSpecified:     
+(warning: in the...    
+ Git touches it:Strin  
+  g) [], RemoteExcepti 
+   on
+    + 
+FullyQualifiedErro    
+rId : NativeCommandE   
+ rror
+ 
+warning: in the 
+working copy of 
+'LICENSE', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 
+'README.md', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/config/db.js', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/controllers/analyze.c
+ontroller.js', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/controllers/auth.cont
+roller.js', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'backen
+d/middleware/auth.middl
+eware.js', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'backen
+d/models/Scan.js', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/models/User.js', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/package-lock.json', 
+LF will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/package.json', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/routes/analyze.routes
+.js', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'backen
+d/routes/auth.routes.js
+', LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 
+'backend/server.js', 
+LF will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/services/analyzer.ser
+vice.js', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'backen
+d/services/claimExtract
+or.service.js', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/services/evidenceGath
+erer.service.js', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'backen
+d/services/scraper.serv
+ice.js', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'backen
+d/utils/geminiClient.js
+', LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 'backen
+d/utils/promptBuilder.j
+s', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'backen
+d/utils/responseParser.
+js', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/app.componen
+t.html', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/app.componen
+t.scss', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/app.componen
+t.ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/app.config.t
+s', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/app.routes.t
+s', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/core/analyze
+.service.ts', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/core/auth.gu
+ard.ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/core/auth.se
+rvice.ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/core/jwt.int
+erceptor.ts', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/core/models/
+scan.model.ts', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/core/models/
+user.model.ts', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/environments
+/environment.ts', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/ana
+lyze/analyze.component.
+html', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/ana
+lyze/analyze.component.
+scss', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/ana
+lyze/analyze.component.
+ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/ana
+lyze/result-card/result
+-card.component.html', 
+LF will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/ana
+lyze/result-card/result
+-card.component.scss', 
+LF will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/ana
+lyze/result-card/result
+-card.component.ts', 
+LF will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/aut
+h/login/login.component
+.html', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/aut
+h/login/login.component
+.scss', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/aut
+h/login/login.component
+.ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/aut
+h/register/register.com
+ponent.html', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/aut
+h/register/register.com
+ponent.scss', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/aut
+h/register/register.com
+ponent.ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/das
+hboard/dashboard.compon
+ent.html', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/das
+hboard/dashboard.compon
+ent.scss', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/das
+hboard/dashboard.compon
+ent.ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/his
+tory/history.component.
+html', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/his
+tory/history.component.
+scss', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/his
+tory/history.component.
+ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/rep
+ort/report.component.ht
+ml', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/rep
+ort/report.component.sc
+ss', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/app/features/rep
+ort/report.component.ts
+', LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/loade
+r/loader.component.html
+', LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/loade
+r/loader.component.scss
+', LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/loade
+r/loader.component.ts',
+ LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/navba
+r/navbar.component.html
+', LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/navba
+r/navbar.component.scss
+', LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/navba
+r/navbar.component.ts',
+ LF will be replaced 
+by CRLF the next time 
+Git touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/score
+-badge/score-badge.comp
+onent.html', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/score
+-badge/score-badge.comp
+onent.scss', LF will 
+be replaced by CRLF 
+the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/app/shared/score
+-badge/score-badge.comp
+onent.ts', LF will be 
+replaced by CRLF the 
+next time Git touches 
+it
+warning: in the 
+working copy of 'fronte
+nd/src/index.html', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/main.ts', LF 
+will be replaced by 
+CRLF the next time Git 
+touches it
+warning: in the 
+working copy of 'fronte
+nd/src/styles.scss', 
+LF will be replaced by 
+CRLF the next time Git 
+touches it

@@ -48,7 +48,15 @@ export class AnalyzeComponent {
       },
       error: (err) => {
         this.isLoading = false;
-        this.error     = err.error?.error || 'Analysis failed. Please try again.';
+        const errMsg = err.error?.error || '';
+        
+        // Map technical quota errors to Cyberpunk-friendly messages
+        if (errMsg.includes('429') || errMsg.toLowerCase().includes('quota')) {
+          this.error = '🛸 Neural Link Busy: The AI is currently processing multiple requests. Please wait 15 seconds and try again.';
+        } else {
+          this.error = '⚠️ Link Interrupted: The deep analysis was unable to complete. Please try again.';
+        }
+        
         this.resetSteps();
       }
     });
