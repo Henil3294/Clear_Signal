@@ -1,0 +1,67 @@
+<div class="result-card">
+
+  <!-- Header: score + verdict -->
+  <div class="result-header">
+    <app-score-badge [score]="scan.credibilityScore" [verdict]="scan.verdict"></app-score-badge>
+    <div class="header-meta">
+      <div class="meta-row">
+        <span class="meta-label">Source agreement</span>
+        <span class="meta-value">{{ scan.sourcesAgreementRate }}%</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Bias direction</span>
+        <span class="meta-value">{{ scan.biasDirection }}</span>
+      </div>
+      <div class="meta-row">
+        <span class="meta-label">Tone</span>
+        <span class="meta-value">{{ scan.tone }}</span>
+      </div>
+    </div>
+    <div class="ai-explanation">
+      <span class="explain-label">AI Analysis</span>
+      <p>{{ scan.aiExplanation }}</p>
+    </div>
+  </div>
+
+  <!-- Claims breakdown -->
+  <div class="section">
+    <h4>Claim Breakdown</h4>
+
+    <div class="claim-group" *ngIf="scan.verifiedClaims?.length">
+      <div class="claim-row verified" *ngFor="let claim of scan.verifiedClaims">
+        <span class="dot"></span>
+        <span class="claim-text">{{ claim }}</span>
+        <span class="claim-badge good">Verified</span>
+      </div>
+    </div>
+
+    <div class="claim-group" *ngIf="scan.contradictedClaims?.length">
+      <div class="claim-row contradicted" *ngFor="let claim of scan.contradictedClaims">
+        <span class="dot"></span>
+        <span class="claim-text">{{ claim }}</span>
+        <span class="claim-badge danger">Contradicted</span>
+      </div>
+    </div>
+
+    <div class="claim-group" *ngIf="scan.unverifiableClaims?.length">
+      <div class="claim-row unverifiable" *ngFor="let claim of scan.unverifiableClaims">
+        <span class="dot"></span>
+        <span class="claim-text">{{ claim }}</span>
+        <span class="claim-badge warn">Unverifiable</span>
+      </div>
+    </div>
+
+    <div class="empty-claims" *ngIf="!scan.verifiedClaims?.length && !scan.contradictedClaims?.length && !scan.unverifiableClaims?.length">
+      No individual claims were extracted.
+    </div>
+  </div>
+
+  <!-- Manipulation flags -->
+  <div class="section" *ngIf="scan.manipulationFlags?.length">
+    <h4>Manipulation Flags</h4>
+    <div class="flags-row">
+      <span class="flag-pill" *ngFor="let flag of scan.manipulationFlags">{{ flag }}</span>
+    </div>
+  </div>
+
+</div>

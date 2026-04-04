@@ -1,0 +1,48 @@
+<div class="analyze-page">
+  <h2 class="page-title">Analyze Article</h2>
+  <p class="page-sub">Paste a news article or headline for a lawyer-style credibility breakdown</p>
+
+  <div class="input-card" *ngIf="!result">
+    <div class="error-banner" *ngIf="error">{{ error }}</div>
+
+    <textarea
+      [(ngModel)]="inputText"
+      placeholder="Paste your article, headline, or claim here..."
+      [disabled]="isLoading"
+      rows="8">
+    </textarea>
+
+    <div class="input-footer">
+      <span class="char-count" [class.warn]="charCount > 4000">
+        {{ charCount }} / 5000
+      </span>
+      <button class="btn-analyze" (click)="onAnalyze()"
+        [disabled]="isLoading || charCount === 0">
+        <span *ngIf="!isLoading">Run Analysis</span>
+        <span *ngIf="isLoading">Analyzing...</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Multi-step loader -->
+  <div class="loader-card" *ngIf="isLoading">
+    <div class="loader-title">
+      <div class="pulse-dot"></div>
+      Analysis in progress
+    </div>
+    <app-loader [steps]="steps"></app-loader>
+  </div>
+
+  <!-- Result -->
+  <div *ngIf="result && !isLoading">
+    <app-result-card [scan]="result"></app-result-card>
+    <div class="result-actions">
+      <button class="btn-secondary" (click)="result = null; inputText = ''">
+        Analyze Another
+      </button>
+      <button class="btn-analyze" (click)="viewFullReport()">
+        View Full Report →
+      </button>
+    </div>
+  </div>
+</div>

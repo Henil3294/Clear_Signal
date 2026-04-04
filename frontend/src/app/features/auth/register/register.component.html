@@ -1,0 +1,48 @@
+<div class="auth-page">
+  <div class="auth-card">
+    <div class="auth-header">
+      <div class="brand-logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="9" stroke="url(#lg2)" stroke-width="1.5"/>
+          <path d="M12 8v8M8 12h8" stroke="url(#lg2)" stroke-width="1.5" stroke-linecap="round"/>
+          <defs>
+            <linearGradient id="lg2" x1="0" y1="0" x2="24" y2="24">
+              <stop offset="0%" stop-color="#00d4ff"/>
+              <stop offset="100%" stop-color="#a855f7"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h1>Create Account</h1>
+      <p>Join Clear Signal today</p>
+    </div>
+
+    <div class="error-banner" *ngIf="error">{{ error }}</div>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="field">
+        <label>Username</label>
+        <input type="text" [(ngModel)]="username" name="username"
+          placeholder="johndoe" autocomplete="username"/>
+      </div>
+      <div class="field">
+        <label>Email</label>
+        <input type="email" [(ngModel)]="email" name="email"
+          placeholder="you@example.com" autocomplete="email"/>
+      </div>
+      <div class="field">
+        <label>Password</label>
+        <input type="password" [(ngModel)]="password" name="password"
+          placeholder="Min. 6 characters" autocomplete="new-password"/>
+      </div>
+      <button type="submit" class="btn-primary" [disabled]="loading">
+        <span *ngIf="!loading">Create Account</span>
+        <span *ngIf="loading" class="spinner"></span>
+      </button>
+    </form>
+
+    <p class="switch-link">
+      Already have an account? <a routerLink="/login">Sign In</a>
+    </p>
+  </div>
+</div>

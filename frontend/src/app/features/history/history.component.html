@@ -1,0 +1,35 @@
+<div class="history-page">
+  <h2 class="page-title">Scan History</h2>
+  <p class="page-sub">All your past analyses</p>
+
+  <div class="filter-bar">
+    <button [class.active]="filter === 'all'"      (click)="filter = 'all'">All</button>
+    <button [class.active]="filter === 'fake'"     (click)="filter = 'fake'">Fake / Misleading</button>
+    <button [class.active]="filter === 'mixed'"    (click)="filter = 'mixed'">Mixed</button>
+    <button [class.active]="filter === 'credible'" (click)="filter = 'credible'">Credible</button>
+  </div>
+
+  <div class="loading-state" *ngIf="loading">
+    <div class="shimmer" *ngFor="let i of [1,2,3,4,5]"></div>
+  </div>
+
+  <div class="empty-state" *ngIf="!loading && filtered.length === 0">
+    <p>No scans match this filter.</p>
+  </div>
+
+  <div class="scan-list" *ngIf="!loading && filtered.length > 0">
+    <a class="scan-row" *ngFor="let scan of filtered"
+       [routerLink]="['/report', scan._id]">
+      <div class="score-tile" [class]="getScoreClass(scan.credibilityScore)">
+        {{ scan.credibilityScore }}
+      </div>
+      <div class="scan-info">
+        <span class="scan-text">{{ truncate(scan.originalText) }}</span>
+        <span class="scan-date">{{ scan.createdAt | date:'MMM d, y · h:mm a' }}</span>
+      </div>
+      <span class="verdict-badge" [class]="getScoreClass(scan.credibilityScore)">
+        {{ scan.verdict }}
+      </span>
+    </a>
+  </div>
+</div>

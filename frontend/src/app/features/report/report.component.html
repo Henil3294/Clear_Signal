@@ -1,0 +1,48 @@
+<div class="report-page">
+  <div class="back-bar">
+    <a routerLink="/history" class="back-link">← Back to History</a>
+    <span class="report-date" *ngIf="scan">{{ scan.createdAt | date:'MMMM d, y · h:mm a' }}</span>
+  </div>
+
+  <div class="loading-state" *ngIf="loading">
+    <div class="shimmer tall"></div>
+    <div class="shimmer"></div>
+  </div>
+
+  <div class="error-state" *ngIf="error && !loading">
+    <p>{{ error }}</p>
+    <a routerLink="/history" class="btn-back">Go to History</a>
+  </div>
+
+  <div *ngIf="scan && !loading">
+    <div class="original-text-card">
+      <span class="card-label">Original Article / Claim</span>
+      <p>{{ scan.originalText }}</p>
+    </div>
+
+    <app-result-card [scan]="scan"></app-result-card>
+
+    <div class="full-report-section" *ngIf="scan.fullReportArticle">
+      <h3 class="cyber-heading">Deep Analysis Report</h3>
+      <div class="article-content" [innerHTML]="scan.fullReportArticle"></div>
+    </div>
+
+    <div class="sources-grid" *ngIf="scan.realNewsSources?.length || scan.fakeNewsSources?.length">
+      
+      <div class="source-box verified-box" *ngIf="scan.realNewsSources?.length">
+        <h4 class="source-title">Verified Truth Sources</h4>
+        <ul>
+          <li *ngFor="let source of scan.realNewsSources">{{ source }}</li>
+        </ul>
+      </div>
+
+      <div class="source-box discredited-box" *ngIf="scan.fakeNewsSources?.length">
+        <h4 class="source-title">Flagged / Unreliable Sources</h4>
+        <ul>
+          <li *ngFor="let source of scan.fakeNewsSources">{{ source }}</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+.score-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  svg {
+    overflow: visible;
+  }
+
+  .track { stroke: rgba(255,255,255,0.05); }
+
+  .score-text {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    fill: #fff;
+    dominant-baseline: middle;
+  }
+
+  .verdict {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px 16px;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &.danger {
+    .fill { stroke: #f72585; filter: drop-shadow(0 0 8px #f72585) drop-shadow(0 0 20px rgba(247,37,133,0.4)); }
+    .verdict { background: rgba(247,37,133,0.12); color: #f72585; border: 1px solid rgba(247,37,133,0.3); }
+  }
+  &.warn {
+    .fill { stroke: #a855f7; filter: drop-shadow(0 0 8px #a855f7) drop-shadow(0 0 20px rgba(168,85,247,0.4)); }
+    .verdict { background: rgba(168,85,247,0.12); color: #a855f7; border: 1px solid rgba(168,85,247,0.3); }
+  }
+  &.good {
+    .fill { stroke: #34d399; filter: drop-shadow(0 0 8px #34d399) drop-shadow(0 0 20px rgba(52,211,153,0.4)); }
+    .verdict { background: rgba(52,211,153,0.12); color: #34d399; border: 1px solid rgba(52,211,153,0.3); }
+  }
+  &.great {
+    .fill { stroke: #00d4ff; filter: drop-shadow(0 0 8px #00d4ff) drop-shadow(0 0 20px rgba(0,212,255,0.4)); }
+    .verdict { background: rgba(0,212,255,0.12); color: #00d4ff; border: 1px solid rgba(0,212,255,0.3); }
+  }
+}

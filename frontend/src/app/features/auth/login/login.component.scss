@@ -1,0 +1,180 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(10, 15, 35, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(0,212,255,0.15);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,212,255,0.6), rgba(168,85,247,0.6), transparent);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(168,85,247,0.3), transparent);
+  }
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(0,212,255,0.08);
+    border: 1px solid rgba(0,212,255,0.2);
+    box-shadow: 0 0 20px rgba(0,212,255,0.15);
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #00d4ff, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 0.82rem;
+    color: #475569;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 0.5px;
+  }
+}
+
+.error-banner {
+  background: rgba(247,37,133,0.08);
+  border: 1px solid rgba(247,37,133,0.25);
+  color: #f72585;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 1.25rem;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+form { display: flex; flex-direction: column; gap: 1rem; }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  input {
+    background: rgba(5, 8, 22, 0.8);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 11px 14px;
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    font-family: 'Rajdhani', sans-serif;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    letter-spacing: 0.3px;
+
+    &::placeholder { color: #1e293b; }
+    &:focus {
+      border-color: rgba(0,212,255,0.35);
+      box-shadow: 0 0 16px rgba(0,212,255,0.08);
+    }
+  }
+}
+
+.btn-primary {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, rgba(0,212,255,0.2), rgba(168,85,247,0.15));
+  border: 1px solid rgba(0,212,255,0.35);
+  border-radius: 30px;
+  color: #00d4ff;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, #00d4ff, #a855f7);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 0 30px rgba(0,212,255,0.35), 0 0 60px rgba(168,85,247,0.15);
+  }
+  &:disabled { opacity: 0.4; cursor: not-allowed; }
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0,212,255,0.2);
+  border-top-color: #00d4ff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,212,255,0.3);
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.switch-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #334155;
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 0.3px;
+
+  a {
+    color: #00d4ff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: text-shadow 0.2s;
+    &:hover { text-shadow: 0 0 10px rgba(0,212,255,0.5); }
+  }
+}
