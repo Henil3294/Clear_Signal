@@ -1,12 +1,18 @@
 <div class="result-card">
 
-  <!-- Header: score + verdict -->
+  <!-- Header: score ring + verdict + meta -->
   <div class="result-header">
-    <app-score-badge [score]="scan.credibilityScore" [verdict]="scan.verdict"></app-score-badge>
+
+    <!-- FIX: [score] and [verdict] must be bound to scan fields, not hardcoded -->
+    <app-score-badge
+      [score]="scan.credibilityScore"
+      [verdict]="scan.verdict">
+    </app-score-badge>
+
     <div class="header-meta">
       <div class="meta-row">
         <span class="meta-label">Source agreement</span>
-        <span class="meta-value">{{ scan.sourcesAgreementRate | number:'1.2-2' }}%</span>
+        <span class="meta-value">{{ scan.sourcesAgreementRate }}%</span>
       </div>
       <div class="meta-row">
         <span class="meta-label">Bias direction</span>
@@ -17,10 +23,12 @@
         <span class="meta-value">{{ scan.tone }}</span>
       </div>
     </div>
+
     <div class="ai-explanation">
       <span class="explain-label">AI Analysis</span>
       <p>{{ scan.aiExplanation }}</p>
     </div>
+
   </div>
 
   <!-- Claims breakdown -->
@@ -51,7 +59,8 @@
       </div>
     </div>
 
-    <div class="empty-claims" *ngIf="!scan.verifiedClaims?.length && !scan.contradictedClaims?.length && !scan.unverifiableClaims?.length">
+    <div class="empty-claims"
+      *ngIf="!scan.verifiedClaims?.length && !scan.contradictedClaims?.length && !scan.unverifiableClaims?.length">
       No individual claims were extracted.
     </div>
   </div>

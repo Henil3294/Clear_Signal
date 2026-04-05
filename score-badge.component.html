@@ -1,0 +1,27 @@
+<div class="score-badge" [class]="colorClass">
+  <svg width="110" height="110" viewBox="0 0 110 110">
+    <!-- Background track -->
+    <circle
+      cx="55" cy="55" r="36"
+      fill="none"
+      stroke-width="7"
+      class="track"/>
+    <!-- Animated fill ring -->
+    <circle
+      cx="55" cy="55" r="36"
+      fill="none"
+      stroke-width="7"
+      class="fill"
+      [attr.stroke-dasharray]="circumference"
+      [attr.stroke-dashoffset]="strokeDashoffset"
+      stroke-linecap="round"
+      transform="rotate(-90 55 55)"/>
+    <!-- Dynamic score number — pulled from @Input() score -->
+    <text
+      x="55" y="60"
+      text-anchor="middle"
+      class="score-text">{{ displayScore }}</text>
+  </svg>
+
+  <div class="verdict">{{ verdict }}</div>
+</div>

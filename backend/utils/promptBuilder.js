@@ -27,11 +27,14 @@ Analyze the claims against the evidence and respond ONLY with a raw JSON object 
 
 CRITICAL GRADING RULES (PROCEDURAL SCORING):
 1. Formula-Based Score: Calculate the credibilityScore mathematically based on the specific evidence. 
-   - Start at 50 points.
-   - Add/Subtract points for every verified or contradicted claim found in the Web Evidence.
-   - Adjust for source reliability (e.g., a BBC confirm is +15, a random blog confirm is +5).
-2. Explicit Granularity: DO NOT use rounded numbers like 0, 40, 50, 80, or 100 unless the evidence is mathematically absolute. Aim for specific, "non-snappy" numbers like 13, 37, 42, 68, or 91 to reflect a precise, non-hardcoded analysis. 
-3. Logic Gap: If evidence is mixed, the score MUST reflect that exact ratio. Never "snap" to the nearest 10.
+   - Start at a base value and apply weighted modifiers.
+   - Every verified claim from a high-authority source adds a unique weighted bonus.
+   - Every contradicted claim from a reliable source subtracts a weighted penalty.
+2. Procedural Variance: Generate a unique, high-precision decimal result. 
+   - STRICT RULE: Do NOT use "nerdy" or "famous" constants like 42, 137, 7, or 69. 
+   - Use the total character count of the evidence as a mathematical seed to ensure decimal variety.
+   - The decimal part MUST look like a genuine result of division (e.g., .19, .58, .04), never a "chosen" number.
+3. Logic Gap: If evidence is mixed, the score MUST reflect that exact ratio.
 4. Verdict Mapping: 
    - 0-25: "Fake News"
    - 26-65: "Misleading"

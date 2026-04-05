@@ -6,7 +6,7 @@
       [attr.stroke-dashoffset]="strokeDashoffset"
       stroke-linecap="round"
       transform="rotate(-90 50 50)"/>
-    <text x="50" y="53" text-anchor="middle" class="score-text">{{ score }}</text>
+    <text x="50" y="53" text-anchor="middle" class="score-text">{{ score | number:'1.1-1' }}</text>
   </svg>
   <div class="verdict">{{ verdict }}</div>
 </div>
