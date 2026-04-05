@@ -1,15 +1,17 @@
 <div class="loader-wrapper">
-  <div class="step" *ngFor="let step of steps" [class]="step.status">
-    <div class="step-icon">
-      <span *ngIf="step.status === 'done'" class="icon-done">✓</span>
-      <span *ngIf="step.status === 'active'" class="spinner"></span>
-      <span *ngIf="step.status === 'pending'" class="icon-pending">○</span>
-    </div>
-    <div class="step-content">
-      <div class="step-label">{{ step.label }}</div>
-      <div class="step-detail">{{ step.detail }}</div>
-      <div class="progress-bar" *ngIf="step.status === 'active'">
-        <div class="progress-fill"></div>
+  <div class="steps-grid">
+    <div class="step" *ngFor="let step of steps" [class]="step.status">
+      <div class="step-icon">
+        <span *ngIf="step.status === 'done'" class="icon-done">✓</span>
+        <span *ngIf="step.status === 'active'" class="spinner"></span>
+        <span *ngIf="step.status === 'pending'" class="icon-pending">○</span>
+      </div>
+      <div class="step-content">
+        <div class="step-label">{{ step.label }}</div>
+        <div class="step-detail">{{ step.detail }}</div>
+        <div class="step-progress-bar" *ngIf="step.status === 'active'">
+          <div class="step-progress-fill"></div>
+        </div>
       </div>
     </div>
   </div>

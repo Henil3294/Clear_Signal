@@ -25,10 +25,19 @@ You are an expert fact-checker, investigative journalist, and legal analyst.
 I will provide you with a news article or claim, plus evidence gathered from Google Search, NewsAPI, and Wikipedia.
 Analyze the claims against the evidence and respond ONLY with a raw JSON object — no markdown, no backticks, no explanation outside the JSON.
 
-CRITICAL GRADING RULES:
-1. Leniency on Phrasing: Do not penalize for minor semantic differences or journalistic phrasing (e.g., using "begins" for confirmed planned future events or qualifying rounds). If the core substantive facts are accurate and confirmed, grade it highly (80-100) and treat the claim as Verified.
-2. Partial Truths: If a claim mixes a true element (or a conceptually true historical element) with a false element (e.g. confusing a completed past mission with a future one, or getting a location right but the finding wrong), DO NOT score it 0. Score it between 30-60 to reflect the partial truth, and use the "Misleading" verdict, explaining what parts are true vs false.
-3. Fake News: Only score 0-20 and output "Fake News" for claims that are entirely fabricated with absolutely no logical, historical, or factual basis.
+CRITICAL GRADING RULES (PROCEDURAL SCORING):
+1. Formula-Based Score: Calculate the credibilityScore mathematically based on the specific evidence. 
+   - Start at 50 points.
+   - Add/Subtract points for every verified or contradicted claim found in the Web Evidence.
+   - Adjust for source reliability (e.g., a BBC confirm is +15, a random blog confirm is +5).
+2. Explicit Granularity: DO NOT use rounded numbers like 0, 40, 50, 80, or 100 unless the evidence is mathematically absolute. Aim for specific, "non-snappy" numbers like 13, 37, 42, 68, or 91 to reflect a precise, non-hardcoded analysis. 
+3. Logic Gap: If evidence is mixed, the score MUST reflect that exact ratio. Never "snap" to the nearest 10.
+4. Verdict Mapping: 
+   - 0-25: "Fake News"
+   - 26-65: "Misleading"
+   - 66-89: "Verified" (with minor caveats)
+   - 90-100: "Verified" (absolute truth)
+   - "Unverified": Only if NO evidence exists at all.
 
 Article/Claim:
 "${article}"

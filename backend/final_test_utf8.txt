@@ -1,0 +1,24 @@
+﻿Γùç injecting env (7) from .env // tip: Γùê secrets for agents [www.dotenvx.com]
+--- TESTING HEADLINE ---
+Headline: Terminated: Trump claims Iran's military leaders killed in strike, shares video
+node : ΓÜá∩╕Å  Gemini 
+Busy (429). Attempt 1/1. 
+Retrying in 2s...
+At line:1 char:1
++ node test_debug.js > 
+final_test.txt 2>&1; 
+powershell -Command 
+"Get-Co ...
++ ~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo       
+       : NotSpecified:   
+  (ΓÜá∩╕Å  Gemini ...t   
+ rying in 2s...:Strin    
+g) [], RemoteExcepti    
+on
+    + FullyQualifiedErro 
+   rId : NativeCommandE  
+  rror
+ 
+Result: undefined

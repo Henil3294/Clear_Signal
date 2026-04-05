@@ -1,0 +1,3 @@
+﻿[main ebb8e92] Add Gemini resilience layer (exponential backoff) and clean UI error mapping
+ 4 files changed, 610 insertions(+), 22 deletions(-)
+ create mode 100644 git_commit_log.txt

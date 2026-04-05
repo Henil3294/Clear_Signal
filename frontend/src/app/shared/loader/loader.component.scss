@@ -1,7 +1,6 @@
-.loader-wrapper {
+.steps-grid {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .step {
@@ -96,24 +95,26 @@
 
 .icon-pending { font-size: 1rem; }
 
-.progress-bar {
+.step-progress-bar {
   height: 2px;
   background: rgba(168,85,247,0.1);
   border-radius: 2px;
   overflow: hidden;
   margin-top: 8px;
 
-  .progress-fill {
+  .step-progress-fill {
     height: 100%;
-    background: linear-gradient(90deg, #00d4ff, #a855f7);
+    background: linear-gradient(90deg, transparent, rgba(0,212,255,0.4), transparent);
+    background-size: 200% 100%;
     border-radius: 2px;
-    animation: progress 2.5s ease-in-out infinite;
+    width: 100%; /* Stable width */
+    animation: scan 1.5s linear infinite;
     box-shadow: 0 0 8px rgba(168,85,247,0.4);
+    background-color: rgba(168,85,247,0.1);
   }
 }
 
-@keyframes progress {
-  0%   { width: 5%; }
-  60%  { width: 80%; }
-  100% { width: 90%; }
+@keyframes scan {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
 }

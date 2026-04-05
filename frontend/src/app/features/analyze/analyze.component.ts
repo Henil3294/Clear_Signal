@@ -18,7 +18,9 @@ export class AnalyzeComponent {
   inputText = '';
   isLoading = false;
   error     = '';
+  percentage = 0;
   result: Scan | null = null;
+  private progressInterval: any;
 
   steps: AnalysisStep[] = [
     { label: 'Extracting claims',   detail: 'Identifying key claims and named entities via Gemini...', status: 'pending' },
@@ -38,8 +40,10 @@ export class AnalyzeComponent {
     this.isLoading = true;
     this.error     = '';
     this.result    = null;
+    this.percentage = 0;
     this.resetSteps();
     this.runStepAnimation();
+    this.startSmoothProgress();
 
     this.analyzeService.analyze(this.inputText).subscribe({
       next: (data) => {
@@ -50,9 +54,11 @@ export class AnalyzeComponent {
         this.isLoading = false;
         const errMsg = err.error?.error || '';
         
-        // Map technical quota errors to Cyberpunk-friendly messages
+        // Map technical quota errors and safety blocks to Cyberpunk-friendly messages
         if (errMsg.includes('429') || errMsg.toLowerCase().includes('quota')) {
           this.error = '🛸 Neural Link Busy: The AI is currently processing multiple requests. Please wait 15 seconds and try again.';
+        } else if (errMsg.includes('blocked') || errMsg.includes('SAFETY')) {
+          this.error = '⚠️ Safety Limitation: The AI model has flagged this content as potentially violating safety guidelines. Please try a different topic.';
         } else {
           this.error = '⚠️ Link Interrupted: The deep analysis was unable to complete. Please try again.';
         }
@@ -82,7 +88,18 @@ export class AnalyzeComponent {
     });
   }
 
+  private startSmoothProgress() {
+    this.progressInterval = setInterval(() => {
+      if (this.percentage < 98) {
+        const increment = this.percentage < 80 ? 1 : 0.2;
+        this.percentage = parseFloat((this.percentage + increment).toFixed(1));
+      }
+    }, 100);
+  }
+
   private finishSteps() {
+    clearInterval(this.progressInterval);
+    this.percentage = 100;
     this.steps.forEach(s => s.status = 'done');
   }
 }

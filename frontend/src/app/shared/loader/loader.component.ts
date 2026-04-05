@@ -16,4 +16,5 @@ export interface AnalysisStep {
 })
 export class LoaderComponent {
   @Input() steps: AnalysisStep[] = [];
+  @Input() percentage: number = 0;
 }
