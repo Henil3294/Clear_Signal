@@ -20,15 +20,15 @@ Clear Signal is a powerful, AI-driven platform designed to protect users from th
 
 ---
 
-## 🧬 Forensic Workflow Architecture
-Clear Signal uses a high-fidelity **"Investigator-Judge"** architecture to ensure the highest accuracy:
+## 🧬 Workflow Architecture
+Clear Signal uses a high-fidelity architecture to ensure the highest accuracy:
 
-### 1. The Investigators (Evidence Gathering)
+### 1. Evidence Gathering
 *   **Google Custom Search**: Scans the live web for blogs, primary sources, and broader articles.
 *   **NewsAPI**: Specifically targets verified journalistic agencies to find official news coverage.
 *   **Wikipedia API**: Provides historical context and verifies named entities.
 
-### 2. The Judge (Cascading AI Intelligence)
+### 2. Cascading AI Intelligence
 *   **Primary Brain (Gemini 2.0 Flash)**: Acts as the lead forensic analyst, cross-referencing all gathered evidence against the user's claim to identify logical gaps.
 *   **Resilience Link (Groq Llama-3)**: A hot-swap fallback engine that ensures 100% uptime if primary links are busy.
 
