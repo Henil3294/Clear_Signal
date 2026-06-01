@@ -2,7 +2,7 @@
 
 > **Verify. Break through the noise. Stay informed.**
 
-Clear Signal is a powerful, AI-driven platform designed to protect users from the growing spread of misinformation. By leveraging **Gemini 1.5 Flash** and real-time evidence gathering, we provide users with a clean, transparent, and evidence-backed way to check if the news they are reading is true, misleading, or a complete fabrication.
+Clear Signal is a production-grade, AI-driven intelligence engine designed to combat the viral spread of automated misinformation. By leveraging an optimized 4-stage pipeline, the platform strips away emotional clickbait noise to extract objective atomic claims, cross-referencing them concurrently against a live network of 40+ trusted news domains and Wikipedia. Powered by Gemini 2.0 Flash as its primary analyst and backed by an instantaneous, under-1-second failover link to Groq (Llama-3.3-70B). Clear Signal completely bypasses traditional LLM hallucination barriers. The system processes unverified public narratives into sharp, data-grounded metrics, delivering precise credibility scores, source agreement percentages, and bias detection on a real-time terminal interface in seconds.
 
 ![License](https://img.shields.io/badge/License-MIT-cyan)
 ![Node](https://img.shields.io/badge/Node-18+-purple)
