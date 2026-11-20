@@ -10,6 +10,19 @@ Clear Signal is a production-grade, AI-driven intelligence engine designed to co
 
 ---
 
+## 📸 Interface Preview
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/87a4e6f2-b6f3-4453-b419-aef670dcf1d7" alt="Clear Signal Dashboard" width="49%" />
+  <img src="https://github.com/user-attachments/assets/c10fb469-1cbd-4465-8e47-77b78702ed56" alt="Clear Signal Analysis View" width="49%" />
+</p>
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b39b5221-fa84-47d6-a793-786746633676" alt="Clear Signal Evidence Report" width="49%" />
+  <img src="https://github.com/user-attachments/assets/0edcab64-8066-46d7-9f28-7ebd3c5b453d" alt="Clear Signal History" width="49%" />
+</p>
+
+---
+
 ## ✨ Key Features
 
 *   **🔍 One-Click Verification**: Simply paste a news article or headline to start a deep analytical scan.
